@@ -1,6 +1,8 @@
 import type { NextPage } from "next";
 import { useEffect } from "react";
+import About from "../components/about";
 import Navbar from "../components/navbar";
+import Projects from "../components/projects";
 
 const Home: NextPage = () => {
   useEffect(() => {
@@ -23,6 +25,8 @@ const Home: NextPage = () => {
   return (
     <div className="background">
       <Navbar />
+      <About />
+      <Projects />
     </div>
   );
 };
