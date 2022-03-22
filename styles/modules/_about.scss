@@ -1,0 +1,75 @@
+.about-container {
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  margin-top: -64px;
+}
+
+.about-me-name {
+  font-size: 15px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-profile {
+  // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+}
+
+.about-seperater {
+  margin-top: 116px;
+  margin-left: auto;
+  margin-right: auto;
+  border-left: 6px solid #022140;
+  height: 500px;
+}
+
+.about-me-read {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@keyframes blinker {
+  from {
+    border-right: 2px solid black;
+  }
+  to {
+    border-right: 2px solid transparent;
+  }
+}
+
+.type-writer {
+  font-size: 36px;
+  span {
+    animation: blinker 800ms steps(40) infinite normal;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .about-me-name {
+    margin-top: 200px;
+    width: 45%;
+  }
+  .about-me-read {
+    width: 45%;
+    padding-top: 150px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-seperater {
+    display: none;
+  }
+  .about-me-name {
+    margin-top: 68px;
+    width: 90%;
+  }
+  .about-me-read {
+    width: 90%;
+  }
+}
