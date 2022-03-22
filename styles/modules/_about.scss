@@ -34,6 +34,22 @@
   margin-right: auto;
 }
 
+@keyframes blinker {
+  from {
+    border-right: 2px solid black;
+  }
+  to {
+    border-right: 2px solid transparent;
+  }
+}
+
+.type-writer {
+  font-size: 36px;
+  span {
+    animation: blinker 800ms steps(40) infinite normal;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .about-me-name {
     margin-top: 200px;
