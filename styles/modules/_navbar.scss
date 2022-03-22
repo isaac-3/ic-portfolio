@@ -36,15 +36,14 @@
   &.active {
     background-color: $nav-link-active;
   }
+
+  &:hover {
+    background-color: $nav-link-active;
+  }
 }
 
 ////
 
-.about-container {
-  background-color: blue;
-  height: 100vh;
-  width: 100%;
-}
 .projects-container {
   background-color: red;
   height: 100vh;
