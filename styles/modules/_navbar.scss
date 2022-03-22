@@ -6,6 +6,7 @@
   height: 64px;
   display: flex;
   @include outline();
+  z-index: 1;
   position: sticky;
   top: 0;
   left: 0;
@@ -40,12 +41,4 @@
   &:hover {
     background-color: $nav-link-active;
   }
-}
-
-////
-
-.projects-container {
-  background-color: red;
-  height: 100vh;
-  width: 100%;
 }
