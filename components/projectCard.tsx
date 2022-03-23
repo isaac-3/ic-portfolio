@@ -7,7 +7,7 @@ interface ProjectCard {
   projectDescription: string;
   codeLink: string;
   demoLink?: string;
-  
+
   realtime?: boolean;
   tools: string[];
   apis?: string;
@@ -19,7 +19,7 @@ const ProjectCard = ({
   projectDescription,
   codeLink,
   demoLink,
-  
+
   realtime = false,
   tools,
   apis,
@@ -31,13 +31,14 @@ const ProjectCard = ({
 
   return (
     <div className="project-card" onClick={(e) => projectSlide(e)}>
-      <Image
-        className="project-img"
-        alt="project-cover"
-        src={imgSrc}
-        height="200px"
-        width="200px"
-      />
+      <div className="project-img">
+        <Image
+          src={imgSrc}
+          layout="fill"
+          objectFit="cover"
+          alt="project-cover"
+        />
+      </div>
       <div className="project-info">
         <div className="project-content">
           <strong>
@@ -75,7 +76,7 @@ const ProjectCard = ({
           ))}
           {apis && (
             <div className="tooltip" title={apis}>
-              API'S
+              API&apos;S
             </div>
           )}
         </div>
