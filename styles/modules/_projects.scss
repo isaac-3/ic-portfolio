@@ -1,0 +1,159 @@
+@use "../abstracts" as *;
+
+.projects-container {
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+}
+
+.project-header {
+  padding-top: 72px;
+  font-family: "Poppins", sans-serif;
+}
+
+.project-slides-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  cursor: pointer;
+  height: 300px;
+  margin: 20px;
+  padding: 0 20px;
+  position: relative;
+  text-align: center;
+  transition: height 1000ms;
+  width: 260px;
+
+  &.expanded {
+    height: 470px;
+    .project-img {
+      transform: translateY(0);
+    }
+    .project-info {
+      clip-path: inset(0 0 0 0);
+      -webkit-clip-path: inset(0 0 0 0);
+    }
+    .project-content {
+      transform: translateY(0px);
+    }
+    .project-footer-arrow {
+      transform: rotate(0deg);
+    }
+  }
+}
+
+.project-img {
+  border-radius: 10px;
+  margin-top: 10px;
+  transform: translateY(10px);
+  transition: transform 1000ms;
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.project-info {
+  clip-path: inset(0 0 0 0);
+  -webkit-clip-path: inset(0 0 0 0);
+  transition: clip-path 1000ms;
+}
+
+.project-content {
+  transform: translateY(-160px);
+  transition: transform 1000ms;
+}
+
+.project-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.project-description {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  padding: 0 10px;
+}
+
+.realtime-caption {
+  font-weight: bold;
+}
+
+.project-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.code-link-button {
+  @include buttonShine(black);
+}
+
+.demo-link-button {
+  @include buttonShine(red);
+}
+
+.project-footer {
+  display: flex;
+}
+
+.tools-container {
+  display: flex;
+  font-size: 12px;
+  justify-content: space-around;
+  position: absolute;
+  bottom: 40px;
+  width: 260px;
+  color: #022140;
+  bottom: 36px;
+  flex-wrap: wrap;
+
+  div {
+    border-bottom: 1px solid #022140;
+    padding: 2px;
+  }
+}
+
+.tooltip {
+  display: inline;
+  position: relative;
+  color: red;
+
+  &:hover:after {
+    background: #111;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 0.5em;
+    margin-top: 4px;
+    color: #fff;
+    content: attr(title);
+    display: block;
+    left: -1em;
+    padding: 2px 4px;
+    position: absolute;
+  }
+}
+
+.project-footer-arrow {
+  position: absolute;
+  bottom: 10px;
+  left: calc(50% - 15px);
+  transform-origin: 50%;
+  transform: rotate(180deg);
+  transition: transform 1000ms;
+}
+
+// @media (max-width: 767px) {
+//   .project-card {
+//     left: calc(50% - 20px);
+//     transform: translateX(-50%);
+//   }
+// }
