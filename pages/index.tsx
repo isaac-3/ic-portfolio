@@ -1,8 +1,10 @@
 import type { NextPage } from "next";
 import { useEffect } from "react";
 import About from "../components/about";
+import Contact from "../components/contact";
 import Navbar from "../components/navbar";
 import Projects from "../components/projects";
+import Skills from "../components/skills";
 
 const Home: NextPage = () => {
   useEffect(() => {
@@ -27,6 +29,8 @@ const Home: NextPage = () => {
       <Navbar />
       <About />
       <Projects />
+      <Skills />
+      <Contact />
     </div>
   );
 };

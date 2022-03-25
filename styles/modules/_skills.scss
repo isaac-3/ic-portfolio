@@ -1,0 +1,47 @@
+.skills-container {
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+}
+
+.skills-header {
+  padding-top: 72px;
+}
+
+.skill-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding-left: 15%;
+  padding-right: 15%;
+  i {
+    margin-bottom: 48px;
+    flex: 0 0 25%;
+    font-size: 100px;
+    &:hover {
+      -webkit-filter: drop-shadow(2px 2px 5px #545453);
+      -moz-filter: drop-shadow(2px 2px 5px #545453);
+      filter: drop-shadow(2px 2px 5px #545453);
+      animation: rotate 0.7s ease-in-out both;
+    }
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+  25% {
+    transform: rotate(3deg) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: rotate(-3deg) translate3d(0, 0, 0);
+  }
+  75% {
+    transform: rotate(1deg) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+}
