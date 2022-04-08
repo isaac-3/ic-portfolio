@@ -5,19 +5,8 @@ const Contact = () => {
     <div className="contacts-container" id="contact">
       <div className="contact-links">
         <h1>CONTACT</h1>
-        {/* <div className="contact-icon-email">
-          <i
-            className="fa fa-envelope-o"
-            id="email-icon"
-            onClick={() =>
-              window.open("mailto:isaacgc0596@gmail.com?subject=Hello!")
-            }
-          ></i>
-          <span>isaacgc0596@gmail.com</span>
-          <br />
-        </div> */}
-        <div className="holder">
-          <div className="btn a">
+        <div className="contact-button-container">
+          <div className="contact-button-icon a">
             <i
               className="fa fa-envelope-o email-icon"
               onClick={() =>
@@ -27,31 +16,32 @@ const Contact = () => {
           </div>
           <span>isaacgc0596@gmail.com</span>
         </div>
-        <div className="btn b">
-          <i
-            className="fa fa-phone phone-icon"
-            // id="phone-icon"
-            onClick={() => window.open("tel:2819355556")}
-          ></i>
-          {/* <span>(281) 935-5556</span> */}
+        <div className="contact-button-container">
+          <div className="contact-button-icon b">
+            <i
+              className="fa fa-phone phone-icon"
+              onClick={() => window.open("tel:2819355556")}
+            ></i>
+          </div>
+          <span>(281) 935-5556</span>
         </div>
-        <div className="btn c">
-          <i
-            className="fa fa-linkedin-square linkedin-icon"
-            // id="linkedin-icon"
-            onClick={() => window.open("https://www.linkedin.com/in/isaac-c0/")}
-          ></i>
-          {/* <span>Connect With Me</span> */}
-          <br />
+        <div className="contact-button-container">
+          <div className="contact-button-icon c">
+            <i
+              className="fa fa-linkedin-square linkedin-icon"
+              onClick={() =>
+                window.open("https://www.linkedin.com/in/isaac-c0/")
+              }
+            ></i>
+          </div>
+          <span>Connect With Me</span>
         </div>
         <h1>RESUME</h1>
-        <div className="btn d">
-          <i
-            className="fa fa-file-o"
-            // id="resume"
-            onClick={() => console.log("sd")}
-          ></i>
-          {/* <span>View My Resume</span> */}
+        <div className="contact-button-container">
+          <div className="contact-button-icon d">
+            <i className="fa fa-file-o" onClick={() => console.log("sd")}></i>
+          </div>
+          <span>View My Resume</span>
         </div>
       </div>
       <div className="contact-form">
