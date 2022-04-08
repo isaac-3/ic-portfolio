@@ -10,3 +10,18 @@ textarea {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
+
+.background {
+  &::before {
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-image: url("../../public/parapic.jpeg");
+    z-index: -1;
+    background-size: cover;
+    filter: grayscale(100%);
+  }
+}
