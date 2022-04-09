@@ -126,3 +126,57 @@
   transform: translate(8px, 8px);
   width: 100%;
 }
+
+// contact form
+.contact-form {
+  width: 350px;
+  height: auto;
+  text-align: center;
+}
+
+.contact-input-label {
+  display: block;
+  width: 100%;
+  padding: 0 16px;
+}
+
+.contact-input {
+  border: 0;
+  outline: 0;
+  font-size: 16px;
+  padding: 16px;
+  margin-bottom: 24px;
+  width: 100%;
+  text-align: center;
+  border-bottom: 2px solid black;
+
+  &:focus {
+    border-bottom: 2px solid red;
+  }
+}
+
+.message-box {
+  height: 220px;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+  resize: none;
+  font-size: 16px;
+  background-color: lightgrey;
+  padding: 16px;
+  margin-top: 8px;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: 0;
+}
+
+.contact-form-submit {
+  border: 0;
+  outline: 0;
+  font-size: 16px;
+  padding: 16px;
+  font-weight: bold;
+  width: 50%;
+  border-radius: 50px;
+}
