@@ -4,13 +4,12 @@
   height: 100%;
   width: 100%;
   text-align: center;
-  background-color: white;
+  background-color: $background;
   margin-top: 280px;
 }
 
 .project-header {
   padding-top: 72px;
-  font-family: "Poppins", sans-serif;
 }
 
 .project-slides-container {
@@ -20,7 +19,7 @@
 }
 
 .project-card {
-  background: white;
+  background: $background;
   border-radius: 8px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   cursor: pointer;
@@ -76,13 +75,11 @@
 }
 
 .project-title {
-  font-family: "Poppins", sans-serif;
   font-weight: 900;
   font-size: 20px;
 }
 
 .project-description {
-  font-family: "Poppins", sans-serif;
   font-size: 14px;
   padding: 0 10px;
 }
@@ -94,13 +91,16 @@
 .project-buttons {
   display: flex;
   justify-content: space-around;
+  margin-top: 8px;
 }
 
 .code-link-button {
+  background-color: inherit;
   @include buttonShine(black);
 }
 
 .demo-link-button {
+  background-color: inherit;
   @include buttonShine(red);
 }
 
@@ -115,12 +115,12 @@
   position: absolute;
   bottom: 40px;
   width: 260px;
-  color: #022140;
+  color: $nav-link;
   bottom: 36px;
   flex-wrap: wrap;
 
   div {
-    border-bottom: 1px solid #022140;
+    border-bottom: 1px solid $nav-link;
     padding: 2px;
   }
 }
