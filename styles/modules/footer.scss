@@ -1,0 +1,63 @@
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  background-color: #091921;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.footer-links i {
+  margin: 16px 10px 0 10px;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 3px solid white;
+  color: white;
+  transition: all 0.5s ease;
+  &:hover {
+    animation: rotate 0.7s ease-in-out both;
+  }
+}
+.footer-links svg {
+  margin: 16px 10px 4px 10px;
+  height: 24px;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 3px solid white;
+  transition: all 0.5s ease;
+  padding: 4px;
+  &:hover {
+    animation: rotate 0.7s ease-in-out both;
+  }
+}
+
+.footer-name {
+  color: white;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+  25% {
+    transform: rotate(6deg) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: rotate(-6deg) translate3d(0, 0, 0);
+  }
+  75% {
+    transform: rotate(3deg) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+}
