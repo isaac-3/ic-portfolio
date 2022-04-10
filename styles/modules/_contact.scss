@@ -1,0 +1,182 @@
+.contacts-container {
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 280px;
+  // margin-bottom: 24px;
+  background-color: white;
+}
+
+.contact-links {
+  text-align: left;
+  padding-top: 72px;
+  margin-bottom: 24px;
+}
+.email-icon {
+  // color: #d44638;
+  // &:hover {
+  //     text-shadow:
+  //   /* White glow */
+  //   // 0 0 2px whitesmoke,
+  //   // 0 0 0px whitesmoke,
+  //   // 0 0 0px whitesmoke,
+  // }
+}
+.linkedin-icon {
+  // color: #0e76a8;
+  // &:hover {
+  //     text-shadow:
+  //   /* White glow */
+  //   // 0 0 2px whitesmoke,
+  //   // 0 0 0px whitesmoke,
+  //   // 0 0 0px whitesmoke,
+  // }
+}
+.resume {
+  // color: #ed2224;
+  // &:hover {
+  //     text-shadow:
+  //   /* White glow */
+  //   // 0 0 2px whitesmoke,
+  //   // 0 0 0px whitesmoke,
+  //   // 0 0 0px whitesmoke,
+  // }
+}
+.phone-icon {
+  // color: green;
+  // &:hover {
+  //     text-shadow:
+  //   /* White glow */
+  //   // 0 0 2px whitesmoke,
+  //   // 0 0 0px whitesmoke,
+  //   // 0 0 0px whitesmoke,
+  // }
+}
+
+.contact-button-container {
+  display: flex;
+  align-items: center;
+  span {
+    margin-left: 16px;
+  }
+  &:hover {
+    span {
+      text-decoration: underline black;
+    }
+  }
+}
+
+.contact-button-icon {
+  background-color: black !important;
+  min-height: 40px;
+  min-width: 40px;
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 50%;
+  margin: 4px 0;
+  color: white;
+
+  i {
+    font-size: 24px;
+    padding: 8px;
+  }
+
+  &.a:hover {
+    // background-color: #d44638 !important;
+  }
+  &.b:hover {
+    // background-color: green !important;
+  }
+  &.c:hover {
+    // background-color: #0e76a8 !important;
+  }
+}
+
+//
+
+.contact-button-icon::after,
+.contact-button-icon::before {
+  content: "";
+  position: absolute;
+  opacity: 0.3;
+  background-color: inherit;
+  border-radius: inherit;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: transform 0.3s ease;
+}
+
+.contact-button-icon:hover {
+  transform: translate(-10px, -10px);
+}
+.contact-button-icon:hover::after {
+  transform: translate(4px, 4px);
+  width: 100%;
+}
+.contact-button-icon:hover::before {
+  transform: translate(8px, 8px);
+  width: 100%;
+}
+
+// contact form
+.contact-form {
+  width: 350px;
+  height: auto;
+  text-align: center;
+}
+
+.contact-input-label {
+  display: block;
+  width: 100%;
+  padding: 0 16px;
+}
+
+.contact-input {
+  border: 0;
+  outline: 0;
+  font-size: 16px;
+  padding: 16px;
+  margin-bottom: 24px;
+  width: 100%;
+  text-align: center;
+  border-bottom: 2px solid black;
+
+  &:focus {
+    border-bottom: 2px solid red;
+  }
+}
+
+.message-box {
+  height: 220px;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+  resize: none;
+  font-size: 16px;
+  background-color: lightgrey;
+  padding: 16px;
+  margin-top: 8px;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: 0;
+}
+
+.contact-form-submit {
+  border: 0;
+  outline: 0;
+  font-size: 16px;
+  padding: 16px;
+  font-weight: bold;
+  width: 50%;
+  border-radius: 50px;
+}
