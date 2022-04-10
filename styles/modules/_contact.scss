@@ -1,3 +1,5 @@
+@use "../abstracts" as *;
+
 .contacts-container {
   height: 100vh;
   width: 100%;
@@ -71,7 +73,7 @@
 }
 
 .contact-button-icon {
-  background-color: black !important;
+  background-color: black;
   min-height: 40px;
   min-width: 40px;
   transition: transform 0.3s ease;
@@ -82,6 +84,7 @@
   border-radius: 50%;
   margin: 4px 0;
   color: white;
+  @include buttonExpand();
 
   i {
     font-size: 24px;
@@ -97,34 +100,6 @@
   &.c:hover {
     // background-color: #0e76a8 !important;
   }
-}
-
-//
-
-.contact-button-icon::after,
-.contact-button-icon::before {
-  content: "";
-  position: absolute;
-  opacity: 0.3;
-  background-color: inherit;
-  border-radius: inherit;
-  height: 100%;
-  left: 0;
-  bottom: 0;
-  z-index: -1;
-  transition: transform 0.3s ease;
-}
-
-.contact-button-icon:hover {
-  transform: translate(-10px, -10px);
-}
-.contact-button-icon:hover::after {
-  transform: translate(4px, 4px);
-  width: 100%;
-}
-.contact-button-icon:hover::before {
-  transform: translate(8px, 8px);
-  width: 100%;
 }
 
 // contact form
@@ -179,4 +154,9 @@
   font-weight: bold;
   width: 50%;
   border-radius: 50px;
+  background-color: black;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  color: white;
+  @include buttonExpand();
 }
