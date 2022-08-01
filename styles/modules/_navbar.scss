@@ -12,12 +12,25 @@
   left: 0;
 }
 
+.nav-logo-container {
+  width: 50%;
+  display: flex;
+}
+
 .nav-logo {
   width: 32px;
   height: 32px;
+  border: 1px solid $text;
   border-radius: 50%;
-  background: yellow;
+  background: transparent;
+  color: $text;
+  display: flex;
   margin: auto;
+
+  h1 {
+    margin: auto;
+    font-size: 20px;
+  }
 }
 
 .nav-links {
