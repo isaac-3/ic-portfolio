@@ -7,6 +7,34 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
+        <link rel="icon" href="iclogo.svg" />
+        <meta
+          prefix="og: http://ogp.me/ns#"
+          property="og:title"
+          content="Isaac Chavez"
+        />
+        <meta
+          prefix="og: http://ogp.me/ns#"
+          property="og:url"
+          content="https://isaac-chavez.com/"
+        />
+        <meta
+          prefix="og: http://ogp.me/ns#"
+          property="og:image"
+          content="https://images.pexels.com/photos/1460627/pexels-photo-1460627.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+        />
+        <meta
+          prefix="og: http://ogp.me/ns#"
+          property="og:image:width"
+          content="225"
+        />
+        <meta
+          prefix="og: http://ogp.me/ns#"
+          property="og:image:height"
+          content="150"
+        />
+        <meta name="description" content="Isaac Chavez" />
+
         <link
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/gh/konpa/devicon@master/devicon.min.css"
