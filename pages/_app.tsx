@@ -7,6 +7,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
+        <title>Isaac Chavez</title>
         <link rel="icon" href="iclogo.svg" />
         <meta
           prefix="og: http://ogp.me/ns#"
