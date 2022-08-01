@@ -155,11 +155,16 @@
   cursor: pointer;
   color: $text;
   @include buttonExpand();
-  margin-bottom: 34px;
 }
 
 @media screen and (min-width: 768px) {
   #contact {
     height: 100vh;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contact-form-submit {
+    margin-bottom: 34px;
   }
 }
