@@ -1,5 +1,23 @@
 import React from "react";
 
+const openPDF = () => {
+  const pdfWindow = window.open("pdfWindow") as Window;
+  const html = `
+    <html>
+      <head>
+        <title>Isaac Resume</title>
+      </head>
+      <body style="margin:0px">
+        <embed width="100%" height="100%" src="/resume.pdf" type="application/pdf">
+      </body>
+    </html>
+  `;
+
+  pdfWindow.document.write(html);
+  pdfWindow.document.close();
+  pdfWindow.history.pushState(null, "", "");
+};
+
 const Contact = () => {
   return (
     <div className="contacts-container" id="contact">
@@ -39,7 +57,7 @@ const Contact = () => {
         <h1>RESUME</h1>
         <div className="contact-button-container">
           <div className="contact-button-icon d">
-            <i className="fa fa-file-o" onClick={() => console.log("sd")}></i>
+            <i className="fa fa-file-o" onClick={() => openPDF()}></i>
           </div>
           <span>View My Resume</span>
         </div>

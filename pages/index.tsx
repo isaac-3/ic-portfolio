@@ -8,23 +8,23 @@ import Projects from "../components/projects";
 import Skills from "../components/skills";
 
 const Home: NextPage = () => {
-  useEffect(() => {
-    window
-      .matchMedia("(prefers-color-scheme: dark)")
-      .addEventListener("change", function (e) {
-        console.log("changed!!");
-      });
+  // useEffect(() => {
+  //   window
+  //     .matchMedia("(prefers-color-scheme: dark)")
+  //     .addEventListener("change", function (e) {
+  //       console.log("changed!!");
+  //     });
 
-    if (
-      window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches
-    ) {
-      // dark mode
-      console.log("dark");
-    } else {
-      console.log("light");
-    }
-  }, []);
+  //   if (
+  //     window.matchMedia &&
+  //     window.matchMedia("(prefers-color-scheme: dark)").matches
+  //   ) {
+  //     // dark mode
+  //     console.log("dark");
+  //   } else {
+  //     console.log("light");
+  //   }
+  // }, []);
   return (
     <div className="background">
       <Navbar />
