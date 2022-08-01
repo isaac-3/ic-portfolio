@@ -35,7 +35,7 @@ const About = () => {
           captivated by everything about it. Working with and learning new
           technologies Intrigues me and gives me new ideas and perspectives to
           various solutions. As a developer, you learn that there is more to
-          programming than just coding, it's an opportunity to help and improve
+          programming than just coding, it&apos;s an opportunity to help and improve
           the world around us. Knowing that software development is a
           never-ending road of learning, I am excited to see what it may and
           will evolve to.
