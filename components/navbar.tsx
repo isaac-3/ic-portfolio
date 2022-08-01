@@ -1,9 +1,25 @@
 import React from "react";
 import { Link } from "react-scroll";
 
-type Props = {};
+const Navbar = () => {
+  const navSlide = () => {
+    const navBurger = document.querySelector(".nav-burger") as HTMLElement;
+    const nav = document.querySelector(".nav-links") as HTMLElement;
+    const navLinks = document.querySelectorAll<HTMLElement>(".nav-links a");
 
-const Navbar = (props: Props) => {
+    nav.classList.toggle("nav-active");
+    navLinks.forEach((link, index) => {
+      if (link.style.animation) {
+        link.style.animation = "";
+      } else {
+        link.style.animation = `navLinkFade 0.5s ease forwards ${
+          index / 7 + 0.5
+        }s`;
+      }
+    });
+    navBurger.classList.toggle("nav-burger-toggle");
+  };
+
   return (
     <div className="navbar">
       <div className="nav-logo-container">
@@ -56,6 +72,11 @@ const Navbar = (props: Props) => {
         >
           Contact
         </Link>
+      </div>
+      <div className="nav-burger" onClick={() => navSlide()}>
+        <div className="line1"></div>
+        <div className="line2"></div>
+        <div className="line3"></div>
       </div>
     </div>
   );
