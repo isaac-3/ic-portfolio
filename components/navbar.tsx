@@ -6,7 +6,11 @@ type Props = {};
 const Navbar = (props: Props) => {
   return (
     <div className="navbar">
-      <div className="nav-logo">ic</div>
+      <div className="nav-logo-container">
+        <div className="nav-logo">
+          <h1>IC</h1>
+        </div>
+      </div>
       <div className="nav-links">
         <Link
           className="nav-link"

@@ -1,3 +1,5 @@
+@use "../abstracts" as *;
+
 .contacts-container {
   height: 100vh;
   width: 100%;
@@ -7,8 +9,7 @@
   justify-content: space-around;
   align-items: center;
   margin-top: 280px;
-  // margin-bottom: 24px;
-  background-color: white;
+  background-color: $background;
 }
 
 .contact-links {
@@ -65,13 +66,13 @@
   }
   &:hover {
     span {
-      text-decoration: underline black;
+      text-decoration: underline $dark-text;
     }
   }
 }
 
 .contact-button-icon {
-  background-color: black !important;
+  background-color: $nav;
   min-height: 40px;
   min-width: 40px;
   transition: transform 0.3s ease;
@@ -81,7 +82,8 @@
   cursor: pointer;
   border-radius: 50%;
   margin: 4px 0;
-  color: white;
+  color: $text;
+  @include buttonExpand();
 
   i {
     font-size: 24px;
@@ -99,37 +101,9 @@
   }
 }
 
-//
-
-.contact-button-icon::after,
-.contact-button-icon::before {
-  content: "";
-  position: absolute;
-  opacity: 0.3;
-  background-color: inherit;
-  border-radius: inherit;
-  height: 100%;
-  left: 0;
-  bottom: 0;
-  z-index: -1;
-  transition: transform 0.3s ease;
-}
-
-.contact-button-icon:hover {
-  transform: translate(-10px, -10px);
-}
-.contact-button-icon:hover::after {
-  transform: translate(4px, 4px);
-  width: 100%;
-}
-.contact-button-icon:hover::before {
-  transform: translate(8px, 8px);
-  width: 100%;
-}
-
 // contact form
 .contact-form {
-  width: 350px;
+  width: 380px;
   height: auto;
   text-align: center;
 }
@@ -137,37 +111,34 @@
 .contact-input-label {
   display: block;
   width: 100%;
-  padding: 0 16px;
 }
 
 .contact-input {
   border: 0;
   outline: 0;
   font-size: 16px;
-  padding: 16px;
+  padding: 16px 0;
   margin-bottom: 24px;
   width: 100%;
   text-align: center;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid $dark-text;
 
   &:focus {
-    border-bottom: 2px solid red;
+    border-bottom: 2px solid $nav-link-active;
   }
 }
 
 .message-box {
   height: 220px;
-  width: 100%;
+  width: calc(100% - 36px);
   border: none;
   border-radius: 8px;
   overflow: hidden;
   resize: none;
   font-size: 16px;
-  background-color: lightgrey;
+  background-color: $text;
   padding: 16px;
   margin-top: 8px;
-  appearance: none;
-  -webkit-appearance: none;
   outline: 0;
 }
 
@@ -179,4 +150,9 @@
   font-weight: bold;
   width: 50%;
   border-radius: 50px;
+  background-color: $nav;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  color: $text;
+  @include buttonExpand();
 }

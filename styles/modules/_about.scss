@@ -1,3 +1,5 @@
+@use "../abstracts" as *;
+
 .about-container {
   height: 100vh;
   width: 100%;
@@ -6,7 +8,7 @@
   flex-wrap: wrap;
   align-content: center;
   margin-top: -64px;
-  background-color: white;
+  background-color: $background;
 }
 
 .about-me-name {
@@ -25,7 +27,7 @@
   margin-top: 116px;
   margin-left: auto;
   margin-right: auto;
-  border-left: 6px solid #022140;
+  border-left: 6px solid $nav-link;
   height: 500px;
 }
 
@@ -37,7 +39,7 @@
 
 @keyframes blinker {
   from {
-    border-right: 2px solid black;
+    border-right: 2px solid $dark-text;
   }
   to {
     border-right: 2px solid transparent;
