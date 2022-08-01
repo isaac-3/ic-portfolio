@@ -34,6 +34,11 @@ function MyApp({ Component, pageProps }: AppProps) {
           content="150"
         />
         <meta name="description" content="Isaac Chavez" />
+        <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+          <input type="text" name="name" />
+          <input type="email" name="email" />
+          <textarea name="message"></textarea>
+        </form>
 
         <link
           rel="stylesheet"
