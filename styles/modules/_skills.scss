@@ -1,7 +1,6 @@
 @use "../abstracts" as *;
 
 .skills-container {
-  height: 100vh;
   width: 100%;
   text-align: center;
   background-color: $background;
@@ -29,6 +28,12 @@
       filter: drop-shadow(2px 2px 5px #545453);
       animation: rotate 0.7s ease-in-out both;
     }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #skills {
+    height: 100vh;
   }
 }
 
