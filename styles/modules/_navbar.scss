@@ -84,21 +84,16 @@
 }
 
 @media screen and (max-width: 768px) {
-  body {
-    overflow-x: hidden;
-  }
   .nav-links {
     position: absolute;
     height: 93vh;
     right: 0px;
     top: 64px;
     background-color: $nav;
-    display: flex;
     flex-direction: column;
     align-items: center;
-    width: 50%;
-    transform: translateX(100%);
-    transition: transform 0.5s ease-in;
+    opacity: 0;
+    transition: opacity 0.25s ease-in-out;
   }
 
   .nav-burger {
@@ -108,5 +103,6 @@
 }
 
 .nav-active {
-  transform: translateX(0%);
+  opacity: 1;
+  transition: opacity 0.25s ease-in-out;
 }
