@@ -1,44 +1,33 @@
-export const typeWriter = function (
-  this: any,
-  textElement: Element | null,
-  sortedWords: string[]
-) {
-  this.textElement = textElement;
-  this.words = sortedWords;
-  this.currentWord = "";
-  this.wordIndex = 0;
-  this.wait = 3000;
-  this.type();
-  this.isDeleting = false;
-} as any as { new (textElement: Element | null, sortedWords: string[]): any };
+import React, { useState, useEffect } from "react";
 
-// Type Method
-typeWriter.prototype.type = function (this: any) {
-  const currentWordIndex = this.wordIndex % this.words.length;
-  const fullWord = this.words[currentWordIndex];
+interface TypeWriterTypes {
+  words: string[];
+}
 
-  if (this.isDeleting) {
-    this.currentWord = fullWord.substring(0, this.currentWord.length - 1);
-  } else {
-    this.currentWord = fullWord.substring(0, this.currentWord.length + 1);
-  }
+export const TypeWriter = ({ words }: TypeWriterTypes) => {
+  const [currentWordIndex, setCurrentWordIndex] = useState(0);
+  const [currentWord, setCurrentWord] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
 
-  this.textElement.innerHTML = `<span>${this.currentWord}</span>`;
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      if (isDeleting) {
+        setCurrentWord(currentWord.substring(0, currentWord.length - 1));
+      } else {
+        setCurrentWord(
+          words[currentWordIndex].substring(0, currentWord.length + 1)
+        );
+      }
 
-  let typeSpeed = 300;
+      if (!isDeleting && currentWord === words[currentWordIndex]) {
+        setTimeout(() => setIsDeleting(true), 500);
+      } else if (isDeleting && currentWord === "") {
+        setIsDeleting(false);
+        setCurrentWordIndex((currentWordIndex + 1) % words.length);
+      }
+    }, 150);
+    return () => clearTimeout(timeout);
+  }, [isDeleting, currentWordIndex, currentWord, words]);
 
-  if (this.isDeleting) {
-    typeSpeed /= 2;
-  }
-
-  if (!this.isDeleting && this.currentWord === fullWord) {
-    typeSpeed = this.wait;
-    this.isDeleting = true;
-  } else if (this.isDeleting && this.currentWord === "") {
-    this.isDeleting = false;
-    this.wordIndex++;
-    typeSpeed = 500;
-  }
-
-  setTimeout(() => this.type(), typeSpeed);
+  return <span className="type-writer">{currentWord}</span>;
 };
