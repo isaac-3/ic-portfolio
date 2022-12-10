@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Head>
         <title>Isaac Chavez</title>
         <link rel="icon" href="iclogo.svg" />
-        <meta
+        {/* <meta
           prefix="og: http://ogp.me/ns#"
           property="og:title"
           content="Isaac Chavez"
@@ -33,7 +33,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           prefix="og: http://ogp.me/ns#"
           property="og:image:height"
           content="150"
-        />
+        /> */}
         <meta name="description" content="Isaac Chavez" />
         {/* @ts-ignore */}
         <form name="contact" netlify="true" netlify-honeypot="bot-field" hidden>
@@ -42,7 +42,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           <textarea name="message"></textarea>
         </form>
 
-        <link
+        {/* <link
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/gh/konpa/devicon@master/devicon.min.css"
         />
@@ -53,7 +53,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@300&family=Poppins:wght@200&display=swap"
-        />
+        /> */}
       </Head>
       <Component {...pageProps} />
     </>
