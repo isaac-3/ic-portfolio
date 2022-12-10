@@ -1,20 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Image from "next/image";
-import { typeWriter } from "../lib/typewriter";
+import { TypeWriter } from "../lib/typewriter";
 
 const About = () => {
-  useEffect(() => {
-    const initTypeWriter = () => {
-      const txtElement = document.querySelector(".type-writer");
-      new typeWriter(txtElement, [
-        "Software Developer",
-        "Lifelong Learner",
-        "Problem Solver",
-      ]);
-    };
-    initTypeWriter();
-  }, []);
-
   return (
     <div className="about-container" id="about">
       <div className="about-me-name">
@@ -26,7 +14,9 @@ const About = () => {
           height={150}
         />
         <h1>hi my name is isaac chavez and i am a . . .</h1>
-        <span className="type-writer"></span>
+        <TypeWriter
+          words={["Software Developer", "Lifelong Learner", "Problem Solver"]}
+        />
       </div>
       <div className="about-seperater"></div>
       <div className="about-me-read">
@@ -35,8 +25,8 @@ const About = () => {
           captivated by everything about it. Working with and learning new
           technologies Intrigues me and gives me new ideas and perspectives to
           various solutions. As a developer, you learn that there is more to
-          programming than just coding, it&apos;s an opportunity to help and improve
-          the world around us. Knowing that software development is a
+          programming than just coding, it&apos;s an opportunity to help and
+          improve the world around us. Knowing that software development is a
           never-ending road of learning, I am excited to see what it may and
           will evolve to.
         </h3>
