@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
-import { TypeWriter } from "../lib/typewriter";
+import { typeWriter } from "../lib/typewriter";
 
 const About = () => {
+  useEffect(() => {
+    const initTypeWriter = () => {
+      const txtElement = document.querySelector(".type-writer");
+      new typeWriter(txtElement, [
+        "Software Developer",
+        "Lifelong Learner",
+        "Problem Solver",
+      ]);
+    };
+    initTypeWriter();
+  }, []);
+
   return (
     <div className="about-container" id="about">
       <div className="about-me-name">
@@ -14,9 +26,7 @@ const About = () => {
           height={150}
         />
         <h1>hi my name is isaac chavez and i am a . . .</h1>
-        <TypeWriter
-          words={["Software Developer", "Lifelong Learner", "Problem Solver"]}
-        />
+        <span className="type-writer"></span>
       </div>
       <div className="about-seperater"></div>
       <div className="about-me-read">
