@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 
-interface ProjectCard {
+interface TypeWriter {
   words: string[];
 }
 
-export const TypeWriter = ({ words }: ProjectCard) => {
+export const TypeWriter = ({ words }: TypeWriter) => {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [currentWord, setCurrentWord] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
