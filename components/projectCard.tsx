@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 interface ProjectCard {
   imgSrc: string;
@@ -30,7 +30,6 @@ const ProjectCard = ({
     const project = e.currentTarget;
     project.classList.toggle("expanded");
   };
-
   const handleMouseEnter = () => setShowTooltip(true);
   const handleMouseLeave = () => setShowTooltip(false);
 
