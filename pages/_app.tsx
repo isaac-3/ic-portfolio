@@ -35,7 +35,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           property="og:image:height"
           content="150"
         /> */}
-        <meta name="description" content="Isaac Chavez" />
+        {/* <meta name="description" content="Isaac Chavez" /> */}
         {/* @ts-ignore */}
         <form name="contact" netlify="true" netlify-honeypot="bot-field" hidden>
           <input type="text" name="name" />
