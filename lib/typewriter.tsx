@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 
-interface TypeWriter {
+interface TypeWriterTypes {
   words: string[];
 }
 
-export const TypeWriter = ({ words }: TypeWriter) => {
+export const TypeWriter = ({ words }: TypeWriterTypes) => {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [currentWord, setCurrentWord] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
