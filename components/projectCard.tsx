@@ -24,12 +24,12 @@ const ProjectCard = ({
   tools,
   apis,
 }: ProjectCard) => {
+  const [showTooltip, setShowTooltip] = useState(false);
+
   const projectSlide = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     const project = e.currentTarget;
     project.classList.toggle("expanded");
   };
-
-  const [showTooltip, setShowTooltip] = useState(false);
 
   const handleMouseEnter = () => setShowTooltip(true);
   const handleMouseLeave = () => setShowTooltip(false);
