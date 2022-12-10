@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 
 interface ProjectCard {
@@ -24,15 +24,10 @@ const ProjectCard = ({
   tools,
   apis,
 }: ProjectCard) => {
-  const [showTooltip, setShowTooltip] = useState(false);
-
   const projectSlide = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     const project = e.currentTarget;
     project.classList.toggle("expanded");
   };
-
-  const handleMouseEnter = () => setShowTooltip(true);
-  const handleMouseLeave = () => setShowTooltip(false);
 
   return (
     <div className="project-card" onClick={(e) => projectSlide(e)}>
@@ -80,13 +75,8 @@ const ProjectCard = ({
             <div key={tool}>{tool}</div>
           ))}
           {apis && (
-            <div
-              className="tooltip-container"
-              onMouseEnter={() => handleMouseEnter()}
-              onMouseLeave={() => handleMouseLeave()}
-            >
+            <div className="tooltip" title={apis}>
               API&apos;S
-              {showTooltip && <div className="tooltip">{apis}</div>}
             </div>
           )}
         </div>
