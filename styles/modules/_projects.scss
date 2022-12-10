@@ -124,23 +124,18 @@
   }
 }
 
-.tooltip {
-  display: inline;
-  position: relative;
+.tooltip-container {
+  background-color: transparent;
   color: red;
+}
 
-  &:hover:after {
-    background: #111;
-    background: rgba(0, 0, 0, 0.8);
-    border-radius: 0.5em;
-    margin-top: 4px;
-    color: #fff;
-    content: attr(title);
-    display: block;
-    left: -1em;
-    padding: 2px 4px;
-    position: absolute;
-  }
+.tooltip {
+  color: $background;
+  background-color: $dark-text;
+  border-radius: 4px;
+  margin-top: 4px;
+  padding: 2px 4px;
+  position: absolute;
 }
 
 .project-footer-arrow {
