@@ -28,11 +28,11 @@ const Home: NextPage = () => {
   return (
     <div className="background">
       <Navbar />
-      <About />
+      {/* <About />
       <Projects />
       <Skills />
       <Contact />
-      <Footer />
+      <Footer /> */}
     </div>
   );
 };
