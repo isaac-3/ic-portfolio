@@ -33,7 +33,7 @@ const Home: NextPage = () => {
       <Skills />
       <Contact />
       <Footer /> */}
-      <h3>hello</h3>
+      <h3>Hello world</h3>
     </div>
   );
 };
