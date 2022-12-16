@@ -27,13 +27,12 @@ const Home: NextPage = () => {
   // }, []);
   return (
     <div className="background">
-      {/* <Navbar /> */}
-      {/* <About />
+      <Navbar />
+      <About />
       <Projects />
       <Skills />
       <Contact />
-      <Footer /> */}
-      <h3>Hello world</h3>
+      <Footer />
     </div>
   );
 };

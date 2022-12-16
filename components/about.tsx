@@ -3,7 +3,6 @@ import Image from "next/image";
 import { TypeWriter } from "../lib/typewriter";
 
 const About = () => {
-
   return (
     <div className="about-container" id="about">
       <div className="about-me-name">
