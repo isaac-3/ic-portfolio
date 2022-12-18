@@ -9,6 +9,20 @@ const Projects = () => {
       </div>
       <div className="project-slides-container">
         <ProjectCard
+          imgSrc="/interperate.png"
+          projectTitle="Interperate"
+          projectDescription="Work management tool to help teams efficiently track tasks/issues among other items"
+          codeLink="https://github.com/isaac-3/interoperate"
+          tools={[
+            "NEXTJS/REDUX",
+            "TYPESCRIPT",
+            "MONGODB",
+            "GRAPHQL",
+            "APOLLO",
+            "SCSS",
+          ]}
+        />
+        <ProjectCard
           imgSrc="/digitaldiner.png"
           projectTitle="The Digital Diner"
           projectDescription="Search recipes by name and category, like and save recipes you enjoy, and create your own recipes to share with the world!"
