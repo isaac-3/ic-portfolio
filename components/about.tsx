@@ -8,9 +8,9 @@ const About = () => {
       <div className="about-me-name">
         <Image
           alt="profile-pic"
-          src="/croppro.jpg"
+          src="/portrait.jpg"
           className="about-profile"
-          width={120}
+          width={150}
           height={150}
         />
         <h1>hi my name is isaac chavez and i am a . . .</h1>
